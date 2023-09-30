@@ -89,7 +89,7 @@ function App() {
     },
     {
         "question": "¿Cuál es el metal más denso?",
-        "options": ["Plomo", "Oro", "Hierro", "Platino"],
+        "options": ["Plomo", "Osmio", "Hierro", "Platino"],
         "correctAnswer": "Osmio",
         "isCorrect": false,
         "isAnswered": false,
@@ -193,7 +193,7 @@ function App() {
     setTimeout(() => {
       setShowFeedback(false);
       currentQuestion.isAnswered = true
-    }, 500);
+    }, 2000);
   };
 
   const handleHalfPower = () => {
