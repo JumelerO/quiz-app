@@ -38,140 +38,6 @@ function App() {
         "isCorrect": false,
         "isAnswered": false,
         "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el elemento químico más abundante en el universo?",
-        "options": ["Oxígeno", "Hidrógeno", "Helio", "Carbono"],
-        "correctAnswer": "Hidrógeno",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿En qué año se llevó a cabo la Revolución Rusa?",
-        "options": ["1905", "1917", "1923", "1930"],
-        "correctAnswer": "1917",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el símbolo químico del oro?",
-        "options": ["Ag", "Fe", "Au", "Hg"],
-        "correctAnswer": "Au",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Quién escribió 'Cien años de soledad'?",
-        "options": ["Gabriel García Márquez", "Mario Vargas Llosa", "Isabel Allende", "Julio Cortázar"],
-        "correctAnswer": "Gabriel García Márquez",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el desierto más grande del mundo?",
-        "options": ["Sahara", "Atacama", "Kalahari", "Gobi"],
-        "correctAnswer": "Sahara",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿En qué año se firmó la Declaración de Independencia de Estados Unidos?",
-        "options": ["1776", "1789", "1801", "1812"],
-        "correctAnswer": "1776",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el metal más denso?",
-        "options": ["Plomo", "Osmio", "Hierro", "Platino"],
-        "correctAnswer": "Osmio",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿En qué continente se encuentra la selva del Amazonas?",
-        "options": ["África", "Asia", "Europa", "América del Sur"],
-        "correctAnswer": "América del Sur",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Quién pintó 'La última cena'?",
-        "options": ["Leonardo da Vinci", "Michelangelo", "Pablo Picasso", "Vincent van Gogh"],
-        "correctAnswer": "Leonardo da Vinci",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el gas más abundante en la atmósfera terrestre?",
-        "options": ["Nitrógeno", "Oxígeno", "Dióxido de carbono", "Argón"],
-        "correctAnswer": "Nitrógeno",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿En qué ciudad se encuentra la Torre de Pisa?",
-        "options": ["Roma", "Florencia", "Pisa", "Nápoles"],
-        "correctAnswer": "Pisa",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el metal utilizado para fabricar pilas alcalinas?",
-        "options": ["Plata", "Cobre", "Zinc", "Hierro"],
-        "correctAnswer": "Zinc",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿En qué año se fundó Google?",
-        "options": ["1995", "1998", "2000", "2004"],
-        "correctAnswer": "1998",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el río más largo de América del Norte?",
-        "options": ["Mississippi", "Yukón", "Colorado", "Misisipi"],
-        "correctAnswer": "Mississippi",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Cuál es el metal más reactivo?",
-        "options": ["Hierro", "Potasio", "Sodio", "Litio"],
-        "correctAnswer": "Potasio",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿En qué país se encuentra la Gran Barrera de Coral?",
-        "options": ["Australia", "Indonesia", "Filipinas", "México"],
-        "correctAnswer": "Australia",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
-    },
-    {
-        "question": "¿Quién escribió 'El Gran Gatsby'?",
-        "options": ["F. Scott Fitzgerald", "Ernest Hemingway", "J.D. Salinger", "Mark Twain"],
-        "correctAnswer": "F. Scott Fitzgerald",
-        "isCorrect": false
     }
   ]
 )
@@ -263,6 +129,10 @@ function App() {
         showQuestion = { showQuestion } 
         currentQuestionToShow = { currentQuestionToShow }
       />
+
+      <div className="absolute bottom-6 z-[100] text-xl">
+        <p>Made with ❤️ by Juan</p>
+      </div>  
 
     </Game>
   );

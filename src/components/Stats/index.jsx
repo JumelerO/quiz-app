@@ -13,7 +13,7 @@ function Stats({ showStats, questions, setShowQuestion, setCurrentQuestionToShow
                 {questions.map((question, idx) => {
                   return <div className='flex flex-col mt-8 justify-center items-center cursor-pointer hover:bg-neutral-300 p-2 transition-colors duration-200 rounded-lg' key={idx} onClick={() => (setShowQuestion(true), setCurrentQuestionToShow(idx))}>
                     <p>{idx + 1}</p>
-                    <div className={`w-4 h-4 ${question.isCorrect ? 'bg-green-600' : 'bg-red-600'}`}></div>
+                    <div className={`w-4 h-4 rounded-full ${question.isCorrect ? 'bg-green-600' : 'bg-red-600'}`}></div>
                   </div>
                 })}
               </div>
