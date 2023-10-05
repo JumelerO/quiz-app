@@ -15,29 +15,173 @@ function App() {
   // States
 
   const [questionIndex, setQuestionIndex] = useState(0);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [showFeedback, setShowFeedback] = useState(false);
+  const [correctAnswers, setCorrectAnswers] = useState(0);  
+  const [totalCorrectAnswers, setTotalCorrectAnswers] = useState(0);
   const [amountPowers, setAmountPowers] = useState(1);
+  const [showFeedback, setShowFeedback] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showQuestion, setShowQuestion] = useState(false);
-  const [totalCorrectAnswers, setTotalCorrectAnswers] = useState(0);
   const [currentQuestionToShow, setCurrentQuestionToShow] = useState(null)
   const [questions, setQuestions] = useState([
     {
-        "question": "¿Cuál es el océano más profundo del mundo?",
-        "options": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Ártico"],
-        "correctAnswer": "Océano Pacífico",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
+      "question": "¿Who plays the role of Dr. Ben Carson in the movie?",
+      "options" : [],
+      "correctAnswer": "Cuba Gooding Jr. portrays Dr. Ben Carson in the film",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
     },
     {
-        "question": "¿Cuál es el país más pequeño del mundo en términos de superficie?",
-        "options": ["Mónaco", "Vaticano", "San Marino", "Liechtenstein"],
-        "correctAnswer": "Vaticano",
-        "isCorrect": false,
-        "isAnswered": false,
-        "questionChoosen": null
+      "question": '¿What is the central theme of "Gifted Hands"?',
+      "options": [],
+      "correctAnswer": "The central theme of the movie is perseverance and the importance of education",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": '¿Who directed the movie "Gifted Hands"?',
+      "options": [],
+      "correctAnswer": "Thomas Carter directed the film.",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "What is the real-life profession of Dr. Ben Carson?",
+      "options": [],
+      "correctAnswer": "Dr. Ben Carson is a renowned neurosurgeon",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What medical condition does the movie primarily focus on?",
+      "options": [],
+      "correctAnswer": "The movie primarily focuses on the separation of conjoined twins, known as craniopagus twins",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿Where does most of the story take place?",
+      "options": [],
+      "correctAnswer": "The story primarily takes place at Johns Hopkins Hospital in Baltimore, Maryland",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What challenges did Ben Carson face during his childhood?",
+      "options": [],
+      "correctAnswer": "Ben Carson faced poverty and struggled with low self-esteem during his childhood",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿Who is Ben Carson's mother in the movie?",
+      "options": [],
+      "correctAnswer": "Aunjanue Ellis portrays Ben Carson's mother, Sonya Carson",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What significant event in his childhood led Ben Carson to discover his love for reading?",
+      "options": [],
+      "correctAnswer": "Ben Carson's discovery of a library card and the world of books was a significant event that ignited his love for reading",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What is the nickname given to Ben Carson by his peers in the movie?",
+      "options": [],
+      "correctAnswer": 'Ben Carson is nicknamed "Dummy" by his peers due to his poor grades',
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿How does Ben Carson overcome his anger and violent temper?",
+      "options": [],
+      "correctAnswer": "He learns to control his anger through prayer and self-reflection",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What medical procedure does Dr. Carson perform that gains him national recognition?",
+      "options": [],
+      "correctAnswer": "Dr. Carson gains national recognition for successfully separating conjoined twins",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿Who is Ben Carson's mentor in the movie?",
+      "options": [],
+      "correctAnswer": "Dr. Cooley, played by Alan Alda, serves as a mentor to Ben Carson",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What role does Ben Carson's wife, Candy, play in his success?",
+      "options": [],
+      "correctAnswer": "Candy Carson provides emotional support and encouragement to her husband throughout his journey",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿How does Ben Carson's faith play a role in his life and career?",
+      "options": [],
+      "correctAnswer": "Ben Carson's faith in God is a significant driving force behind his determination and success",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": '¿What is the significance of the title "Gifted Hands"?',
+      "options": [],
+      "correctAnswer": "The title refers to Dr. Ben Carson's remarkable surgical skills and his ability to heal and save lives",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿How does Dr. Carson approach complex medical cases in the movie?",
+      "options": [],
+      "correctAnswer": "Dr. Carson approaches complex cases with innovative and unconventional surgical techniques",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What challenges does Dr. Carson face as an African American in the medical field during the 20th century?",
+      "options": [],
+      "correctAnswer": "Dr. Carson faces racism and skepticism about his abilities as an African American surgeon",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": "¿What message does the movie convey about the importance of education?",
+      "options": [],
+      "correctAnswer": "The movie emphasizes the transformative power of education and the potential it has to change lives",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
+    },
+    {
+      "question": '¿How does "Gifted Hands" inspire its audience?',
+      "options": [],
+      "correctAnswer": "The movie inspires its audience by showcasing the incredible achievements of Dr. Ben Carson, emphasizing the importance of perseverance, faith, and education in overcoming adversity",
+      "isCorrect": false,
+      "isAnswered": false,
+      "questionChoosen": null
     }
   ]
 )
